@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eugene Shakov. Front-end/JS developer</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=
+    Anek+Latin:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <section class="top-nav">
+        <input id="hamburger-toggle" type="checkbox">
+        <label class="hamburger" for="hamburger-toggle">
+            <i class="hamburger-button"></i>
+        </label>
+        <nav>
+            <ul class="menu">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </section>
+    <h1 id="title">
+        Eugene Shakov<br>&lt; <i id="title-select">Front-end/JS</i> developer />
+    </h1>
+</header>
+
+<section id="about">
+    <div id="image-collage">
+        <img id="avatar-background" src="images/image.png"
+             alt="background with code">
+        <img id="avatar" src="images/avatar.png" alt="me">
+    </div>
+    <div id="about-text-section">
+        <h2>About me</h2><br>
+        <p>
+            Hi! I am Eugene. I've been a junior front-end developer
+            for 2 months now.<br>
+            For me, programming is not just a job, it's a hobby.<br>
+            I'm open to new knowledge, I like to study new technologies
+            and apply them in practice.<br><br>
+            <b>Skills:</b> HTML, CSS, JS, Unix, Git, SQL
+        </p>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="project-preview">
+        <p>
+            <img src="images/virtual%20piano%20preview.png" alt="Virtual Piano preview">
+        </p>
+        <h3>Virtual Piano</h3>
+        <button class="btn-default open-window" onclick="popUp('open-vp')">View</button>
+    </div>
+    <div class="window open-vp window-closed">
+        <div class="popup-window">
+            <div class="popup-window-header">
+                <h2>Virtual Piano</h2>
+            </div>
+            <div class="popup-window-content">
+                <p>
+                    <img src="images/virtual%20piano%20preview.png"
+                         alt="Virtual Piano preview"><br>
+                </p>
+                <h3>Virtual Piano</h3><br>
+                <p>
+                    You can see the project at the following link:
+                    <a href="https://github.com/YauheniShakau/virtual-piano">
+                        VirtualPiano</a>.
+                    I did this project when I was studying the frontend on HyperSkill. I created
+                    a web page with working piano keys, learned some HTML basics and
+                    learned that CSS can easily make a beautiful design.
+                </p>
+            </div>
+            <div class="popup-window-footer">
+                <button class="btn-default" onclick="popUp('open-vp')">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contacts">
+    <h2>Contacts</h2>
+    <p>
+        You can contact me at
+        <a href="mailto:shakov.ew@gmail.com">shakov.ew@gmail.com</a>
+        or phone number <a href="tel:+375296714015">+375(29)671-40-15</a>
+    </p>
+</section>
+<footer>
+    Shakov Eugene<br>2022
+</footer>
+<script src="popUp.js"></script>
+</body>
+</html>

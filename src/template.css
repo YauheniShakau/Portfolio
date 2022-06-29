@@ -1,0 +1,338 @@
+/* This is the main template stylesheet */
+/*palette #FFFCF2 #CCC5B9 #403D39 #252422 #F6AC87*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anek Latin', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+html, body {
+    color: #CCC5B9;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* HAMBURGER MENU ---------------------------------------------------------- */
+
+.hamburger {
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hamburger-button,
+.hamburger-button::before,
+.hamburger-button::after {
+    display: block;
+    position: absolute;
+    background-color: #CCC5B9;
+    width: 25px;
+    height: 2px;
+    border-radius: 1px;
+    transition: all 300ms ease;
+}
+
+.hamburger-button::before {
+    margin-top: -8px;
+    content: '';
+}
+
+.hamburger-button::after {
+    margin-top: 8px;
+    content: '';
+}
+
+#hamburger-toggle {
+    display: none;
+}
+
+#hamburger-toggle:checked ~ .hamburger .hamburger-button::before {
+    margin: 0;
+    transform: rotate(-135deg);
+}
+
+#hamburger-toggle:checked ~ .hamburger .hamburger-button::after {
+    margin: 0;
+    transform: rotate(135deg);
+}
+
+#hamburger-toggle:checked ~ .hamburger .hamburger-button {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* HEADER ------------------------------------------------------------------ */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("images/bg.jpg") center;
+    background-size: cover;
+    height: 94vh;
+    max-height: 692px;
+}
+
+#title {
+    display: inline;
+    align-self: flex-start;
+    margin: 2em;
+    font-size: 38pt;
+    font-weight: 500;
+}
+
+#title-select {
+    color: #F6AC87;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* MENU -------------------------------------------------------------------- */
+
+.top-nav {
+    display: flex;
+    background: #252422;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    font-weight: 237;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: #CCC5B9;
+    transition: color, background-color 0.2s ease-in-out;
+}
+
+.menu a:hover {
+    background-color: #CCC5B9;
+    color: #252422;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ABOUT SECTION ----------------------------------------------------------- */
+
+#about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #CCC5B9;
+    /*padding: 50px;*/
+    /*height: 94vh;*/
+}
+
+#about-text-section {
+    flex: 0 1 20vw;
+    margin: 50px 20px 50px 0;
+    padding: 20px 40px;
+    color: #252422;
+    border: 1px solid #403D39;
+    z-index: 4;
+    max-width: 500px;
+    /*overflow: scroll;*/
+}
+
+#image-collage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 2 35vw;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 50px 100px;
+}
+
+#avatar {
+    position: absolute;
+    margin: 105px 0 0 105px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    z-index: 3;
+}
+
+#avatar-background {
+    margin: 0 105px 105px 0;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    z-index: 2;
+}
+
+/* PORTFOLIO SECTION ------------------------------------------------------- */
+/* UNDONE, WILL BE READY AFTER PROJECTS DEPLOY */
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #403D39;
+    /*height: 94vh;*/
+}
+
+#portfolio > h2 {
+    margin: 70px auto;
+}
+
+#portfolio img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.project-preview .btn-default {
+    margin-top: 50px;
+}
+
+.project-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 20px 50px;
+}
+
+/* POP-UP WINDOW ----------------------------------------------------------- */
+
+.popup-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #403D39;
+    margin: auto 50px;
+    padding: 20px 40px;
+    width: 500px;
+    max-width: 50vw;
+    height: 670px;
+    max-height: 90vh;
+}
+
+.popup-window-header {
+    margin-bottom: 20px;
+}
+
+.popup-window-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.popup-window-footer {
+    margin-top: 20px;
+}
+
+.popup-window img {
+
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    z-index: 100;
+}
+
+.window-closed {
+    display: none;
+}
+
+.btn-default {
+    padding: 1em 3em;
+    width: fit-content;
+    background-color: #252422;
+    border: 0;
+    color: #CCC5B9;
+    font-size: 12pt;
+    transition: color, background-color 200ms ease-in-out;
+}
+
+.btn-default:hover {
+    background-color: #CCC5B9;
+    color: #252422;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.popup-window a {
+    color: #F6AC87;
+    transition: all 200ms ease-in-out;
+}
+
+.popup-window a:hover {
+    color: #CCC5B9;
+    transition: all 200ms ease-in-out;
+}
+
+/* CONTACTS SECTION -------------------------------------------------------- */
+
+#contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #CCC5B9;
+    color: #252422;
+    height: 31vh;
+}
+
+#contacts > p {
+    margin: 0 20px;
+}
+
+#contacts a {
+    color: #252422;
+}
+
+#contacts a:hover {
+    color: #403D39;
+}
+
+/* FOOTER ------------------------------------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.6;
+    background: #252422;
+    color: #CCC5B9;
+    text-align: center;
+    height: 15vh;
+}
+
+

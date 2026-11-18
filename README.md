@@ -2,26 +2,7 @@
 
 A static portfolio with an introduction, a Virtual Piano project card and contact links. HTML and CSS handle the layout, and a small JavaScript function controls the project dialog.
 
-[Demo](#demo) · [Repository map](#repository-map) · [PDF slides](docs/readme/overview.pdf) · [AGENTS.md](AGENTS.md)
-
-## Demo
-
-![Virtual Piano project dialog in the portfolio, opened from the local checkout.](docs/readme/demo.jpg)
-
-Virtual Piano project dialog in the portfolio, opened from the local checkout.
-
-1. Open the portfolio in a browser.
-2. In Portfolio, choose View on the Virtual Piano card.
-3. Read the project details, then close the dialog.
-
-## How it works
-
-```mermaid
-flowchart TD
-    A["Portfolio page"] --> B["Virtual Piano project card"] --> C["Project dialog"]
-```
-
-## Repository map
+## Implementation guide
 
 | File or directory | Purpose |
 | --- | --- |
@@ -37,3 +18,9 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory src
 ```
 
 Open `http://127.0.0.1:8000/`. Check the script with `node --check src/popUp.js`. If you change the dialog or grid, open the page at a desktop and a phone viewport.
+
+## Interface
+
+![Virtual Piano project dialog in the portfolio, opened from the local checkout.](docs/readme/demo.jpg)
+
+[Implementation history](https://github.com/YauheniShakau/Portfolio/commits/main/)
